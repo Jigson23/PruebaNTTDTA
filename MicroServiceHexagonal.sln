@@ -16,6 +16,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{02B441B0-C275-4290-8E17-C958063CA768}"
 	ProjectSection(SolutionItems) = preProject
 		BaseDatos.sql = BaseDatos.sql
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroService.Tetsting", "MicroService.Tetsting\MicroService.Tetsting.csproj", "{6C3198F4-FBD4-489D-BBAC-7CEFB56F7666}"
