@@ -32,8 +32,8 @@ namespace MicroService.Infraestructura.Datos.Contextos
         public DbSet<Movimientos> Movimientos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options) {
-            //options.UseSqlServer($"Server={SERVER},{PORT};Initial Catalog={DATABASE};Persist Security Info=False;User ID={USERNAME};Password={PASSWORD};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate={TRUST_SERVER_CERTIFICATE}; Integrated Security={INTEGRATED_SECURITY};Connection Timeout=30;");
-            options.UseSqlServer($"Data Source=localhost,14333;Initial Catalog=BancoDB;Persist Security Info=False;User ID=sa;Password=Channel321*;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=true; Integrated Security=false;Connection Timeout=30;");
+            options.UseSqlServer($"Server={SERVER},{PORT};Initial Catalog={DATABASE};Persist Security Info=False;User ID={USERNAME};Password={PASSWORD};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate={TRUST_SERVER_CERTIFICATE}; Integrated Security={INTEGRATED_SECURITY};Connection Timeout=30;");
+            //options.UseSqlServer($"Data Source=localhost,14333;Initial Catalog=BancoDB;Persist Security Info=False;User ID=sa;Password=Channel321*;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=true; Integrated Security=false;Connection Timeout=30;");
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
