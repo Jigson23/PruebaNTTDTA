@@ -61,14 +61,18 @@ namespace MicroService.Infraestructura.Datos.Repositorios
                     }
                     entidad.saldo = UltimoMovimiento.saldo - entidad.valor;
                 }
+                else {
+                    if (cuenta.saldoInicial <= 0)
+                    {
+                        throw new Exception("Saldo no disponible");
+                    }
+                    else
+                    {
+                        entidad.saldo = cuenta.saldoInicial - entidad.valor;
+                    }
+                }
 
-                if (cuenta.saldoInicial <= 0)
-                {
-                    throw new Exception("Saldo no disponible");
-                }
-                else if(UltimoMovimiento.saldo <= 0){
-                    entidad.saldo = cuenta.saldoInicial - entidad.valor;
-                }
+                
             }
 
             db.Movimientos.Add(entidad);
