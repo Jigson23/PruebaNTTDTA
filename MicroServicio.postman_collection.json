@@ -1,0 +1,372 @@
+{
+	"info": {
+		"_postman_id": "5d0555c0-ad35-4cb8-b290-e9207ae6afdb",
+		"name": "MicroServicio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6405723"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contrasenia\": \"1234\",\r\n    \"estado\": true,\r\n    \"persona\": {\r\n        \"nombre\": \"Jose Lema\",\r\n        \"genero\": \"M\",\r\n        \"edad\": 25,\r\n        \"identificacion\": \"0950804849\",\r\n        \"direccion\": \"Otavalo sn y principal\",\r\n        \"telefono\": \"098254785\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/Cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"Cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/Cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"Cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/Cliente/f96a5a0c-c5cc-4fad-9f85-129490f647be",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"Cliente",
+								"f96a5a0c-c5cc-4fad-9f85-129490f647be"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contrasenia\": \"12345\",\r\n    \"estado\": true,\r\n    \"persona\": {\r\n        \"nombre\": \"Jose Lema\",\r\n        \"genero\": \"F\",\r\n        \"edad\": 25,\r\n        \"identificacion\": \"0950804849\",\r\n        \"direccion\": \"Otavalo sn y principal\",\r\n        \"telefono\": \"098254785\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/Cliente/f96a5a0c-c5cc-4fad-9f85-129490f647be",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"Cliente",
+								"f96a5a0c-c5cc-4fad-9f85-129490f647be"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/Cliente/f96a5a0c-c5cc-4fad-9f85-129490f647be",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"Cliente",
+								"f96a5a0c-c5cc-4fad-9f85-129490f647be"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuenta",
+			"item": [
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroCuenta\": \"478758\",\r\n    \"tipoCuenta\": \"Ahorro\",\r\n    \"saldoInicial\": 2000,\r\n    \"estado\": true,\r\n    \"clienteId\": \"13d14f2c-88b8-4456-af4c-bd05e34e7e57\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/Cuenta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"Cuenta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCuentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/Cuenta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"Cuenta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/Cuenta/4f4dbf02-572e-4395-be2c-3c6ef18cd18e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"Cuenta",
+								"4f4dbf02-572e-4395-be2c-3c6ef18cd18e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroCuenta\": \"478758\",\r\n    \"tipoCuenta\": \"Corriente\",\r\n    \"saldoInicial\": 2000,\r\n    \"estado\": true,\r\n    \"Cliente\": {\r\n        \"clienteId\": \"E67BFA8D-7F7A-4D3D-8F7E-0995DF91161D\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/Cuenta/4f4dbf02-572e-4395-be2c-3c6ef18cd18e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"Cuenta",
+								"4f4dbf02-572e-4395-be2c-3c6ef18cd18e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/Cuenta/4f4dbf02-572e-4395-be2c-3c6ef18cd18e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"Cuenta",
+								"4f4dbf02-572e-4395-be2c-3c6ef18cd18e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimientos",
+			"item": [
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"valor\": 300,\r\n    \"tipoMovimiento\": \"debito\",\r\n    \"cuenta\": {\r\n        \"numeroCuenta\": \"478758\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/Movimiento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"Movimiento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Estado de Cuenta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/Movimiento/reporte?beginDate=2022-09-09&endDate=2022-09-12&cuenta=478758",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"Movimiento",
+								"reporte"
+							],
+							"query": [
+								{
+									"key": "beginDate",
+									"value": "2022-09-09"
+								},
+								{
+									"key": "endDate",
+									"value": "2022-09-12"
+								},
+								{
+									"key": "cuenta",
+									"value": "478758"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMovimientos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/Movimiento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"Movimiento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/Movimiento/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"Movimiento",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
