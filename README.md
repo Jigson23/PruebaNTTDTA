@@ -1,4 +1,4 @@
-# Micriservic Project
+# MicroService Project
 
 docker-compose up
 
